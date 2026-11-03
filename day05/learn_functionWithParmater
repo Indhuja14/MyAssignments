@@ -1,0 +1,22 @@
+
+
+
+//to add a function --> this is for dynamic inputs --100 set of inputs
+function add(num1,num2,num3){ // () is aruguments,params
+//kept this function only once but can be called multiple times with diff set of ip's
+//while declaring pass the variables 
+//let num1 = 20;
+//let num2 = 10; //adding two numbers so declaring here first
+console.log (num1+num2+num3); 
+}
+add(25,1,1); //whereas pass the value for the varaiables
+add(5,1,1); //whereas pass the value for the varaiables
+
+function userName(first,last){
+console.log (first); 
+console.log(last);
+}
+userName("Ram",1); 
+userName("Sam",2); 
+//Notes - Real time application
+//URL : FB, email and password - diff type of data set we can use it

@@ -1,0 +1,27 @@
+//return type to store th o/p
+function add(){
+    let num1 = 1;
+    let num2 = 2 ;
+    let num3 =num1 + num2;
+    return num3;
+}
+let sum = add(); //storing method into a variable , we can either store in variable
+                //calling a function won't return anything so store in a variable
+                //value 3 stored in a variable actual return type
+console.log(sum);
+console.log(typeof sum);
+
+//or 
+ add(); //we can call a function directly w/o varaible
+                //value 3 stored in function
+console.log(add());
+
+//let num1=1; //data type is number
+//let num2 =2; //data type is number
+//num3 =num1+num2; //additin result data type is number
+
+//adding two number and storing in number (num3) so when i complete the method,
+//this particular method will return a number
+//so we use return, return is a keyword to return a vallue for a method
+
+
