@@ -1,0 +1,57 @@
+//callback function
+
+//function functionName()
+//{
+   // console.log ("This is a normal function");
+//}
+
+//Two approach:
+//function call itself
+//using one function calling other function.
+
+//Test case 1:
+//enter userName
+//enter password
+//click login
+
+// need to complete in sequence , we dont have that much feature in playwrigt so using callbackfunction
+
+
+//This below code used to execute fn seperately
+/* function enterUsername(){  //to execute the method line 19-21 need to call particular fn
+console.log ("Username entered");
+}
+enterUsername();   //function called here for 19-21
+
+function enterPassword(){
+    console.log("Password entered");
+
+}
+enterPassword(); //same as above */
+
+//We are going to execute one function and  that should other function. how to call that method refer below example
+function enterUsername(password,age){  //to execute the method line 19-21 need to call particular fn
+//callback is a variable name -user defined 
+//paramter method
+    console.log ("Username entered");
+    password();
+    age(); //() is a functino signature
+    //callback replaced by enterpassword automatically method called inside
+}
+  //function called here for 19-21
+
+function enterPassword(){
+    console.log("Password entered");
+
+}
+
+function enterAge(){
+    console.log("age entered");
+
+}
+
+enterUsername(enterPassword,enterAge); //arugument to be passed here -MethodName is passed
+//arugument passed as method name
+//enterPassword replaced with callback
+
+//initally we used this callback method now await and asynchronous was used.
