@@ -1,0 +1,100 @@
+Notes: 
+1.What is playwright?
+PW is both automation tool and automation frmwrk.
+web automatn tool.
+
+2.features of PW:
+faster execution,
+inbuilt cross browser testing
+
+3.PW is an open source test automation tool.
+chrome , edge comes under chromium.
+firefox 
+webkit - safari.
+Instead of testing in mobile, we can test this as a simulator.
+Exclusive mobile testing means need to add some libraries
+Test UI and api in playwright
+lang supported : python, java,js ,C# and TS.
+'TypeScript' is most used.
+
+4.compared to Sel why we use playwright?
+
+To automate web application
+we required :
+- browser 
+- Editor to write a code -> which lang going to use ? - Js and Ts
+- Architecure means whathevr code is written how its going to interact with browser
+
+Selenium arch (Java, python whatever)
+Selenium with java arch example:
+Each browser - will have diff driver(Set of softwares) - lets assume drivers written in java
+
+Lets say,se java (code) will send a api request to Driver (written in java)
+requires browser specific drivers
+b/wn these two there is a translator (w3c)
+(w3c) - world wide web consortium (www.) - w3 act as protocol to transfer a request from code to driver
+
+code will sends a request to browser
+then browser sends a response back
+
+Playwright arch example:
+pw will not have a seperate drivers only node server
+all browser present in single playwright node server
+protocol - websocket is used in playwright
+
+send websocket cmd thru websocket API - sent as websocket request --> will check browser availability
+then browser - it send response back
+
+selenium vs playwright req and response:
+sel: 
+for each code seperate request and response will happen thru w3c and connection get disabled once completed
+
+playwright:
+request and response will happen thru websocket on same path (package) and connection 
+will not disconnected until all lines executed
+
+hint : everytime it has to be established in connection in se but not in pw
+
+Plawright (websocket) - full duplex (2 way communication), long lived connection 
+(whatsapp is an example for pw response)
+(Bank app is an example for se response)
+
+
+advantages of playwright?
+API integrtn by default in pw
+speed
+--------------------------------------------------------------
+
+Naming convention:
+.js - javascript naming convention
+.ts -typescript
+.spec.ts - playwright script saving convention
+.test.ts - - playwright script saving convention
+
+Playwright script: few folders will be created
+//****playwright.config.ts - is a file has few configurations
+used to read required dependencies
+to provide the configurations for test case - every config can be set in playwright.config.ts
+
+//**** package.json - for providing various dependencies.
+downlaod various dependencies along with version
+
+//***tests folder - will have the test cases here only.
+//**node modules- all software availble here
+
+----------------------
+//test dir - folder name is tests - by default consider this folder for test case
+while executing.
+
+//browsers : chromium,edge (chrome)
+firefox, safari
+
+--------------------
+to write PW test case:
+to write a pw code - package required it will be available under
+/playwright-test (under node_modules -playwright/test) - here all required s/w available
+
+so whatvr test case need to use this package.
+then create a test case
+to create a test case we have a method call -  test
+test  -  test method() available under playwright/test
